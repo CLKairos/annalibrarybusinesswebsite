@@ -28,9 +28,9 @@ const organizations = [
 
 const sponsors = [
     {
-        image: "https://kairosllc.vercel.app/assets/kairosllc-CqtXXQOJ.png",
-        title: "KairosLLC",
-        description: "Providing innovative web solutions and tools to help individuals and businesses succeed.",
+        image: "https://kairosllc.vercel.app/K%20LLC/KLLC-Mint-NoBg.png",
+        title: "CLKairos",
+        description: "Quality developmental services providing assistance quickly and effectively.",
     }
 ];
 
