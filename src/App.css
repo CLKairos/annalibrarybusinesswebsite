@@ -21,12 +21,12 @@ body {
 /* 3. Header Section */
 .header {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 25vh;
   background: url("https://www.annatexas.gov/ImageRepository/Document?documentID=10626") center/cover no-repeat;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header::before {
@@ -36,12 +36,37 @@ body {
   background: rgba(0, 0, 0, 0.5);
 }
 
-.header h1 {
+.headerText h1 {
   position: relative;
   color: var(--primary-white);
   font-size: clamp(2rem, 8vh, 5rem); /* Responsive font size */
   text-shadow: var(--shadow-text);
   margin: 0;
+}
+
+.navBar {
+  margin-top: -16px;
+  background-color: whitesmoke;
+}
+
+.navBar ul {
+  list-style: none;
+  display: flex;
+  justify-content: left;
+  gap: 0px;
+}
+
+.navBar button {
+  padding: 5px;
+  width: 150px;
+  border: 0px;
+  background-color: transparent;
+  color: var(--text-dark);
+}
+
+.navBar button:hover {
+  background-color: var(--bg-hover);
+  color: black;
 }
 
 /* 4. Card Layouts */
