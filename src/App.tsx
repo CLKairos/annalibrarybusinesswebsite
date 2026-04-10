@@ -1,6 +1,8 @@
 import './App.css';
 import Organization from "./components/Organization.tsx";
-import Sponsor from "./components/Sponsor.tsx"
+import Sponsor from "./components/Sponsor.tsx";
+import Footer from "./components/Footer.tsx";
+import Header from "./components/Header.tsx";
 
 const organizations = [
     {
@@ -38,9 +40,7 @@ const sponsors = [
 function App() {
   return (
     <>
-        <div className="header">
-          <h1>Business Partners of Anna</h1>
-         </div>
+        <Header />
          <div className="card">
              <h1>Our Organizations</h1><br/><hr />
              {organizations.map((org, index) => (
@@ -53,18 +53,7 @@ function App() {
                 <Sponsor key={index} {...org} />
             ))}
         </div>
-         <div className="read-the-docs">
-          <img src={"https://placehold.co/600x400"}></img>
-          <p>
-              <b>City Directory</b><br />
-              City of Anna<br/>
-              P.O. Box 776<br/>
-              120 W. 7th St.<br/>
-              Anna, TX 75409<br/>
-              Phone: 972-924-3325<br/>
-              Email Us
-          </p>
-         </div>
+        <Footer />
     </>
   )
 }
