@@ -6,7 +6,7 @@ function Sponsor(data) {
         <div className={"card-contents"}>
             <img src={data.image}/>
             <div className={"card-text"}>
-                <h2>{data.title}</h2>
+                <h2><a href={data.link}>{data.title}</a></h2>
                 <p>{data.description}</p>
             </div>
         </div>

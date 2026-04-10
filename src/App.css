@@ -1,83 +1,119 @@
-body {
-  width: 100%;
-  margin: 0px 0px;
-  padding: 0px 0px;
+/* 1. Configuration & Variables */
+:root {
+  --primary-white: #ffffff;
+  --text-dark: #003a5d;
+  --bg-light: #007DA5;
+  --bg-hover: #00a4e3;
+  --shadow-standard: 0 8px 20px rgba(0, 0, 0, 0.2);
+  --shadow-text: 2px 8px 20px rgba(0, 0, 0, 1);
+  --border-radius: 10px;
+  --transition-speed: 0.2s ease;
 }
 
+/* 2. Global Styles */
+body {
+  width: 1170px;
+  margin: 0 auto;
+  padding: 0 0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* 3. Header Section */
 .header {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  background-image: url("https://www.annatexas.gov/ImageRepository/Document?documentID=10626");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 60vh;
+  height: 25vh;
+  background: url("https://www.annatexas.gov/ImageRepository/Document?documentID=10626") center/cover no-repeat;
+  overflow: hidden;
 }
 
 .header::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .header h1 {
   position: relative;
-  color: white;
-  font-size: 100px;
-  text-shadow: 0 8px 20px rgba(0,0,0,100%);
+  color: var(--primary-white);
+  font-size: clamp(2rem, 8vh, 5rem); /* Responsive font size */
+  text-shadow: var(--shadow-text);
+  margin: 0;
 }
 
+/* 4. Card Layouts */
 .card {
-  text-align: center;
-  padding: 2rem;
+  padding: 2rem 0;
 }
 
 .card-contents {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 2rem;
-  padding: 3rem 2rem;
-  color: #000;
-  border-radius: 10px;
-  transition: background 0.2s ease, box-shadow 0.2s ease;
+  padding: 2rem;
+  color: var(--text-dark);
+  border-radius: var(--border-radius);
+  transition: background var(--transition-speed), box-shadow var(--transition-speed);
 }
 
 .card-contents:hover {
-  background: #ddd;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  background: var(--bg-hover);
+  box-shadow: var(--shadow-standard);
 }
 
 .card-contents img {
-  max-width: 150px;
-  height: auto;
+  width: 150px;
+  aspect-ratio: 1 / 1; /* Ensures images stay square if desired */
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: calc(var(--border-radius) / 2);
 }
 
 .card-text {
-  text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: left;
 }
 
+/* 5. Footer / Docs Grid */
 .read-the-docs {
   display: grid;
-  grid-template-columns: auto 1fr 1fr 1fr;
-  gap: 2rem;
-  padding: 3rem 2rem;
-  background: #eee;
-  color: #000;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Auto-responsive columns */
+  gap: 1rem;
+  padding: 2rem 2rem;
+  background: #96daea;
+  color: var(--text-dark);
+  margin-top: 2rem;
 }
 
+.read-the-docs img {
+  width: 14vw;
+}
+
+/* 6. Media Queries */
 @media (max-width: 768px) {
-  .read-the-docs {
-    grid-template-columns: 1fr;
+  body {
+    width: 750px;
+  }
+
+  .header h1 {
+    font-size: 25px;
+  }
+
+  .card-contents {
+    grid-template-columns: 1fr; /* Stack image on top of text */
+    text-align: center;
+  }
+
+  .card-contents img {
+    margin: 0 auto;
+    width: 50px;
+  }
+
+  .card-text {
     text-align: center;
   }
 }
-

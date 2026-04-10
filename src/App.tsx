@@ -7,8 +7,8 @@ const organizations = [
         image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6XyJ6eT1dpIOIMhLG4lBBEYxUZH9Xxnxn2Q&s",
         title: "Anna Community Library Foundation",
         description: "The Anna Community Library Foundation is a separate volunteer-run 501(c)(3) nonprofit focused on long-term support of the library through fundraising, grants and gifts. It operates independently to enhance library facilities and resources for the public.",
-        ctalink: "",
-        ctatext: "",
+        ctalink: "https://annatx.aspendiscovery.org",
+        ctatext: "Visit Website",
     },
     {
         image: "https://www.annatexas.gov/ImageRepository/Document?documentID=3892",
@@ -31,6 +31,7 @@ const sponsors = [
         image: "https://kairosllc.vercel.app/K%20LLC/KLLC-Mint-NoBg.png",
         title: "CLKairos",
         description: "Quality developmental services providing assistance quickly and effectively.",
+        link: "https://kairosllc.org",
     }
 ];
 
@@ -53,7 +54,7 @@ function App() {
             ))}
         </div>
          <div className="read-the-docs">
-          <img src={"https://www.annatexas.gov/ImageRepository/Document?documentId=6403"}></img>
+          <img src={"https://placehold.co/600x400"}></img>
           <p>
               <b>City Directory</b><br />
               City of Anna<br/>
@@ -62,24 +63,6 @@ function App() {
               Anna, TX 75409<br/>
               Phone: 972-924-3325<br/>
               Email Us
-          </p>
-          <p>
-              <b>Quick Links</b><br/>
-              Online Payments<br />
-              Trash and Recycling<br/>
-              Open Records Request<br />
-              Agendas, Minutes, Watch Online<br/>
-              Employment<br/>
-              Staff Directory<br/>
-          </p>
-          <p>
-              <b>Site Links</b><br />
-              Home<br/>
-              Website Policy<br />
-              Stay Connected<br />
-              SeeClickFix<br />
-              Subscribe to e-Newsletter<br/>
-              City Manager Reports<br />
           </p>
          </div>
     </>
